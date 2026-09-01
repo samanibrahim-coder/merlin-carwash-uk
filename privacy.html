@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="privacy-policy">
+    <div class="container">
+        <div class="section-header">
+            <h1>Privacy Policy</h1>
+            <p>{{ config.name }}</p>
+        </div>
+        
+        <div class="privacy-content">
+            <h2>How We Handle Your Information</h2>
+            
+            <h3>Booking Request Process</h3>
+            <p>When you use our booking form, you provide the following information:</p>
+            <ul>
+                <li>Your full name</li>
+                <li>Your phone number</li>
+                <li>Your chosen service and vehicle type</li>
+                <li>Your preferred date and time</li>
+            </ul>
+            
+            <h3>What Happens to Your Information</h3>
+            <p><strong>WhatsApp Message Creation:</strong> The website creates a WhatsApp message containing your booking details. This message is prepared based on the information you provide in the form.</p>
+            
+            <p><strong>Your Action Required:</strong> You must press the "Send" button in WhatsApp to actually send your booking request. The website cannot send this message automatically.</p>
+            
+            <p><strong>Booking Confirmation:</strong> Your booking is only confirmed after MERLIN HAND CARWASH replies to your WhatsApp message. Until you receive a reply from us, your booking request is not confirmed.</p>
+            
+            <h3>Data Storage</h3>
+            <p>The website does not store your personal information or booking details. Your information is only used to create the WhatsApp message. Once you press Send in WhatsApp, the communication happens directly between you and MERLIN HAND CARWASH through WhatsApp's service.</p>
+            
+            <h3>Contact Information</h3>
+            <p>If you have questions about how we handle your information, please contact us:</p>
+            <ul>
+                <li>Phone: {{ config.phone }}</li>
+                <li>Address: {{ config.address|replace('\n', '<br>')|safe }}</li>
+            </ul>
+            
+            <div class="privacy-notice-box">
+                <p><strong>Important:</strong> This website does not collect, store, or process your personal data beyond creating the WhatsApp message. All communication and booking confirmations happen through WhatsApp.</p>
+            </div>
+        </div>
+        
+        <div class="back-link">
+            <a href="/" class="btn btn-secondary">Return to Home</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
